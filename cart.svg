@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>cart</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F4C9CF" offset="0%"></stop>
+            <stop stop-color="#D7B87C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="all" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="专题" transform="translate(-324.000000, -579.000000)">
+            <g id="cart" transform="translate(324.000000, 579.000000)">
+                <circle id="Oval-74" fill="url(#linearGradient-1)" cx="23" cy="23" r="23"></circle>
+                <path d="M15.2613349,17.0089274 L32.2069927,17.0089274 L32.2069927,24.0040077 L15.2613349,25.8195658 L15.2613349,17.0089274 Z M18.4388981,31.0751288 C18.4388981,31.4109196 18.179821,31.6827822 17.8601805,31.6827822 C17.5398671,31.6827822 17.2801171,31.4109196 17.2801171,31.0751288 C17.2801171,30.739338 17.5398671,30.4674754 17.8601805,30.4674754 C18.179821,30.4674754 18.4388981,30.739338 18.4388981,31.0751288 Z M30.4607461,31.0751288 C30.4607461,31.4109196 30.2009961,31.6827822 29.8806827,31.6827822 C29.5610422,31.6827822 29.3019651,31.4109196 29.3019651,31.0751288 C29.3019651,30.739338 29.5610422,30.4674754 29.8806827,30.4674754 C30.2009961,30.4674754 30.4607461,30.739338 30.4607461,31.0751288 Z" id="Imported-Layers" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M11.2237705,14.3172178 L12.3334278,14.3172178 C12.9774193,14.3172178 13.5944937,14.5857158 14.0500656,15.0634942 L14.2701128,15.2943083 C14.7256847,15.7720868 14.9813971,16.4201159 14.9813971,17.095735 L14.9813971,26.2569686 C14.9813971,26.9325877 15.2371095,27.5806168 15.6920084,28.0583953 C16.1475803,28.5361737 16.7660006,28.8046718 17.4093192,28.8046718 L31.9317654,28.8046718" id="Imported-Layers" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>
