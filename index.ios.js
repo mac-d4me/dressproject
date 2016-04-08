@@ -2,90 +2,100 @@
  * Sample React Native App
  * https://github.com/facebook/react-native
  */
-
 'use strict';
 
 var React = require('react-native');
-var AboutView = require('./About');
-var GroupsView = require('./Groups');
-var SearchView = require('./Search');
 var {
   AppRegistry,
   StyleSheet,
-  TabBarIOS,
   Text,
   View,
+  TabBarIOS,
   NavigatorIOS,
-  Image
-  } = React;
+} = React;
 
 var IndexView = React.createClass({
-  statics: {
-    title: 'index',
-    description: 'Home'
+  getInitialState: function() {
+      return {
+          selectedTab: 'home'
+      };
   },
-
-  getInitialState: function () {
-    return {
-      selectedBar: 'group'
-    };
-  },
-
-  _renderContent: function (title, component) {
+  render: function() {
     return (
-      <NavigatorIOS
-        style = {styles.container}
-        initialRoute={{
-          title: title,
-          component: component
-        }} />
-    );
-  },
+        <TabBarIOS selectedTab={this.state.selectedTab}>
+            <TabBarIOS.Item accessibilityLabel={"Excellent"}
+                selected={this.state.selectedTab === 'home'}
+                title="首页"
+                name="home"
+                icon={{uri: 'icon.png', isStatic: true}}
+                onPress={() => {
+                    this.setState({
+                      selectedTab: 'home'
+                    });
+                }}>
+                <NavigatorIOS style={Style.container}
+                    tintColor={'#333344'}
+                    initialRoute={{
+                      title: 'D4ME',
+                      component: require('./App/Views/Home/Home')
+                    }}
+                    itemWrapperStyle={Style.navigator} />
+            </TabBarIOS.Item>
 
-  render: function () {
-    return (
-      <TabBarIOS selectedTab={this.state.selectedBar}>
-        <TabBarIOS.Item
-          title = '首页'
-          key = 'group'
-          name = 'group'
-          //icon = {require('image!groups')}
-          //systemIcon = 'more'
-          selected = {this.state.selectedBar == 'group'}
-          onPress = {() => this.setState({selectedBar: 'group'})}
-        >
-          {this._renderContent('D4ME', GroupsView)}
-        </TabBarIOS.Item>
-        <TabBarIOS.Item
-          title = '专题'
-          key = 'search'
-          name = 'search'
-          //systemIcon = 'more'
-          selected = {this.state.selectedBar == 'search'}
-          onPress = {() => this.setState({selectedBar: 'search'})}
-        >
-          {this._renderContent('D4ME', SearchView)}
-        </TabBarIOS.Item>
-        <TabBarIOS.Item
-          title = '我的'
-          key = 'about'
-          name = 'about'
-          selected = {this.state.selectedBar == 'about'}
-          systemIcon = 'more'
-          onPress = {() => this.setState({selectedBar: 'about'})}
-        >
-          {this._renderContent('D4ME', AboutView)}
-        </TabBarIOS.Item>
-      </TabBarIOS>
+            <TabBarIOS.Item accessibilityLabel={"Nodes"}
+                selected={this.state.selectedTab === 'nodes'}
+                title="主题"
+                name="nodes"
+                icon={{uri:'nodes.png'}}
+                onPress={() => {
+                    this.setState({
+                      selectedTab: 'nodes'
+                    });
+                }}>
+
+                <NavigatorIOS style={Style.container}
+                    tintColor={'#333344'}
+                    initialRoute={{
+                      title: 'D4ME',
+                      component: require('./App/Views/Home/Nodes')
+                    }}
+                    itemWrapperStyle={Style.navigator} />
+
+            </TabBarIOS.Item>
+
+            <TabBarIOS.Item accessibilityLabel={"About"}
+                selected={this.state.selectedTab === 'about'}
+                title="我的"
+                name="about"
+                icon={{uri: 'reactnative_logo.png'}}
+                onPress={() => {
+                    this.setState({
+                      selectedTab: 'about'
+                    });
+                }}>
+
+                <NavigatorIOS style={Style.container}
+                    tintColor={'#333344'}
+                    initialRoute={{
+                      title: 'D4ME',
+                      component: require('./App/Views/Home/About')
+                    }}
+                    itemWrapperStyle={Style.navigator} />
+
+            </TabBarIOS.Item>
+        </TabBarIOS>
     );
   }
 });
-var styles = StyleSheet.create({
+
+var Style = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: '#E7EAEC'
+  },
+  navigator: {
+    backgroundColor: '#E7EAEC'
   }
 });
-
-module.exports = IndexView;
 
 AppRegistry.registerComponent('DressProject', () => IndexView);
